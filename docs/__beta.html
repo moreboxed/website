@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moreboxed — Beta</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .content {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .content h2 {
+      margin-top: 2rem;
+    }
+    .content ul {
+      padding-left: 1.5rem;
+    }
+    .content figure {
+      margin: 2rem 0;
+      text-align: center;
+    }
+    .content figure img {
+      max-width: 100%;
+      height: auto;
+    }
+    .back {
+      display: block;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h2> Welcome to our private beta </h2>
+    <h2>What is it?</h2>
+    <p>Moreboxed is a macOS app providing local virtual machines optimized and streamlined for AI agent use.</p>
+    <p> We believe running AI agents directly on your computers is a real risk. These agents can and sometimes do install random stuff, view your private information (which ends up in someone lab's training data) and more. We believe running them in an appropriate sandbox is crucial.</p>
+    <p>It's made by Murat (<a href="https://x.com/morew4rd">@morew4rd</a> on X, github and gmail) and Nic (<a href="https://x.com/z0rbn">@z0rbn</a> on X, <a href="https://github.com/Zorbn">@Zorbn</a> on github) to scratch our own itch. Hopefully it helps you too.</p>
+
+
+    <figure>
+      <center>
+        <div>Terminal running a shell inside a VM</div>
+        <img src="assets/moreboxed-terminal-view-1.png" width="1000">
+      </center>
+    </figure>
+
+    <h2>TL;DR</h2>
+    <p>
+      We handle everything (image downloads, VM creation and unattended setup, SSH key generation and deployment,
+      local DNS, and optionally agent installation) to bring you local Mac and Linux VMS. Once installed, quickly open an SSH connection with a single click
+      using the built-in terminal. Or start a Mac VM in GUI mode for desktop agents. Enable shared folders (optionally readonly), setup environment variables and more.
+    </p>
+
+    <h2>Private Beta</h2>
+    <p> Thank you for joining our private beta! Please pick either download the zip
+      (just unzip and move it to your Applications folder) or use homebrew installation method.
+      App is properly codesigned and notarized by Apple.
+    </p>
+    <ul>
+      <li>Download zip: <span id="latest-link">loading…</span></li>
+      <li>Homebrew installation:
+<pre>
+  brew tap moreboxed/tap
+  brew install moreboxed
+</pre>
+      </li>
+      <li>
+        Please join our discord: <a href="https://discord.gg/TtBBEmu894" target="_blank">https://discord.gg/TtBBEmu894</a>
+      </li>
+    </ul>
+
+    <h2>VMs and connectivity</h2>
+    <ul>
+      <li><strong>Linux VMs</strong> — Ubuntu, Debian, Fedora, and others via cloud-init images. Automatic disk resizing, user creation, and SSH key setup.</li>
+      <li><strong>macOS VMs</strong> — Uses Apple's restore images (IPSWs). Full unattended setup automation on first boot, with optional cache acceleration for subsequent VMs using the same image and credentials.</li>
+      <li>One-click SSH terminal (integrated SwiftTerm)</li>
+    </ul>
+
+    <h3>Shared folders, env vars</h3>
+    <ul>
+      <li>Per-VM shared folders with read/write or read-only access</li>
+      <li>Shared folder presets (save a host path once, attach to any VM)</li>
+      <li>Per-VM environment variables</li>
+      <li>Environment variable presets (apply common env vars to any VM)</li>
+      <li>Agent and tooling setup scripts that run automatically after VM creation</li>
+    </ul>
+
+    <h3>Images</h3>
+    <ul>
+      <li>Built-in image browser and downloader for Linux cloud images</li>
+      <li>macOS IPSW download and management</li>
+      <li>Download progress tracking with stall detection</li>
+      <li>Image deletion</li>
+    </ul>
+
+    <h3>macOS cache</h3>
+    <p>After a macOS VM completes its first full installation, the resulting disk state are cached by default. Creating another VM with the same OS, version, and username will restore from cache instead of re-running the 12–15 minute installation.</p>
+    <p>Caches are listed in the GUI with size and creation date, and can be deleted individually.</p>
+
+    <h2>System requirements</h2>
+    <ul>
+      <li>Apple Silicon</li>
+      <li>8 GB RAM. 16 GB recommended.</li>
+      <li>30+ GB free space</li>
+      <li>macOS 14.0 or later. Sequoia or Tahoe recommended.</li>
+    </ul>
+
+    <h2>Screenshots</h2>
+
+    <figure>
+      <center>
+        <div>Terminal running a shell inside a VM</div>
+        <img src="assets/moreboxed-terminal-view-1.png" width="1000">
+      </center>
+    </figure>
+
+    <figure>
+      <center>
+        <div>Host view</div>
+        <img src="assets/moreboxed-host-view-1.png" width="1000">
+      </center>
+    </figure>
+
+    <figure>
+      <center>
+        <div>Create VM view</div>
+        <img src="assets/moreboxed-vm-create-view-1.png" width="1000">
+      </center>
+    </figure>
+
+    <figure>
+      <center>
+        <div>VM view</div>
+        <img src="assets/moreboxed-vm-view-1.png" width="1000">
+      </center>
+    </figure>
+
+    <figure>
+      <center>
+        <div>VM view</div>
+        <img src="assets/moreboxed-vm-view-1.png" width="1000">
+      </center>
+    </figure>
+
+    <figure>
+      <center>
+        <div>VM view 2</div>
+        <img src="assets/moreboxed-vm-view-2.png" width="1000">
+      </center>
+    </figure>
+
+    <figure>
+      <center>
+        <div>Light mode</div>
+        <img src="assets/moreboxed-terminal-view-3.png" width="1000">
+      </center>
+    </figure>
+
+    <figure>
+      <center>
+        <div>VM GUI</div>
+        <img src="assets/moreboxed-vm-gui-1.png" width="1000">
+      </center>
+    </figure>
+  </div>
+<script>
+  fetch('versions.json')
+    .then(r => r.json())
+    .then(data => {
+      const el = document.getElementById('latest-link');
+      if (el && data.download_url) {
+        el.innerHTML = '<a href="' + data.download_url + '">Moreboxed-' + (data.version || 'latest') + '.zip</a>';
+      }
+    })
+    .catch(() => {
+      const el = document.getElementById('latest-link');
+      if (el) el.textContent = 'unavailable';
+    });
+</script>
+</body>
+</html>
