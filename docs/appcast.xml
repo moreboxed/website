@@ -6,17 +6,17 @@
     <description>Latest updates for Moreboxed</description>
     <language>en</language>
     <item>
-      <title>Version 0.1.17</title>
-      <pubDate>Thu, 14 May 2026 19:11:32 +0000</pubDate>
-      <sparkle:version>17</sparkle:version>
-      <sparkle:shortVersionString>0.1.17</sparkle:shortVersionString>
+      <title>Version 0.1.18</title>
+      <pubDate>Fri, 15 May 2026 13:06:03 +0000</pubDate>
+      <sparkle:version>18</sparkle:version>
+      <sparkle:shortVersionString>0.1.18</sparkle:shortVersionString>
       <description><![CDATA[
-        <p>Moreboxed 0.1.17 release. See <a href="https://github.com/moreboxed/moreboxed/releases/tag/v0.1.17">release notes</a>.</p>
+        <p>Moreboxed 0.1.18 release. See <a href="https://github.com/moreboxed/moreboxed/releases/tag/v0.1.18">release notes</a>.</p>
       ]]></description>
       <enclosure
-        url="https://github.com/moreboxed/releases/releases/download/v0.1.17/Moreboxed-0.1.17.zip"
-        sparkle:edSignature="yomqHAYiq4NhFw5wUIMmHIsXVR37qdoImUNrAM9gQ9c8DwLeRz7TSPEmU1GgsNif1iFg7cvgbNBFgszXeji7BA=="
-        length="6018530"
+        url="https://github.com/moreboxed/releases/releases/download/v0.1.18/Moreboxed-0.1.18.zip"
+        sparkle:edSignature="JallyoIMkG8FdSWeuCzDZAxqKlAL8GHkpHLyYORMT2Yis/iSh40a8aYanOnnX2mp08WmcXnlarpFSas+E38ZDQ=="
+        length="6021626"
         type="application/octet-stream"
       />
     </item>
